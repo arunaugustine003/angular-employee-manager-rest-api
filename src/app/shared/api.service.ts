@@ -9,28 +9,28 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   postEmployee(data: any) {
-    return this.http.post<any>('https://angular-employee-manager-new.herokuapp.com/employees/', data).pipe(
+    return this.http.post<any>('https://employee-manager-db-by-arun.glitch.me/employees/', data).pipe(
       map((res: any) => {
         return res;
       })
     );
   }
   getEmployee() {
-    return this.http.get<any>('https://angular-employee-manager-new.herokuapp.com/employees/').pipe(
+    return this.http.get<any>('https://employee-manager-db-by-arun.glitch.me/employees/').pipe(
       map((res: any) => {
         return res;
       })
     );
   }
   updateEmployee(data: any, id: number) {
-    return this.http.put<any>('https://angular-employee-manager-new.herokuapp.com/employees/' + id, data).pipe(
+    return this.http.put<any>('https://employee-manager-db-by-arun.glitch.me/employees/' + id, data).pipe(
       map((res: any) => {
         return res;
       })
     );
   }
   deleteEmployee(id: number) {
-    return this.http.delete<any>('https://angular-employee-manager-new.herokuapp.com/employees/' + id).pipe(
+    return this.http.delete<any>('https://employee-manager-db-by-arun.glitch.me/employees/' + id).pipe(
       map((res: any) => {
         return res;
       })
